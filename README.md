@@ -1,2 +1,2 @@
 Grupo:
-Gisely da Silva Macedo, Igor Ricardo Golçaves Lousada, Sofia Baracat Lapenta, Janzantti
+Gisely da Silva Macedo, Igor Ricardo Gonçalves Lousada, Sofia Baracat Lapenta Janzantti
