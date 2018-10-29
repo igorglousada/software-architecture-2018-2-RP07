@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import edu.utfpr.cp.sa.dao.CountryDAO;
 import edu.utfpr.cp.sa.entity.Country;
 
+import edu.utfpr.cp.sa.entity.Customer;
+
 @Component
 public class CountryBusiness {
 
@@ -44,10 +46,16 @@ public class CountryBusiness {
         }
     }
 
-    public boolean delete(Long id) {
+    public boolean delete(List<Customer> listCus, Long id) throws Exception{
 
         Country c = this.read().stream().filter(e -> e.getId() == id).findAny().get();
 
+        for (Customer cmer : listCus){
+            if (cmer.getCountry().getId() == c.getId()){
+                throw new IllegalArgumentException("ERROR.");
+            }
+        }
+        
         this.countryDAO.delete(c);
         return true;
     }
