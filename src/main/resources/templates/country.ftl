@@ -64,6 +64,7 @@
                         <td>${country.name}</td>
                         <td>${country.acronym}</td>
                         <td>${country.phoneDigits}</td>
+                        <td><input type="submit" value="Delete" class="btn btn-primary"></td>
                     </tr>
                 </#list>    
                 </tbody>
